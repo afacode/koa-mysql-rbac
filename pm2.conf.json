@@ -1,0 +1,30 @@
+{
+  "apps": [
+    {
+      "name": "real",
+      "script": "./app.js",
+      "watch": [
+        "controller",
+        "middleware",
+        "model",
+        "router",
+        "service",
+        "util"
+      ],
+      "ignore_watch": [
+        "node_modules",
+        "log",
+        "static",
+        "build",
+        "public"
+      ],
+      "node_args": "--harmony",
+      "exec_mode": "fork_mode",
+      "error_file": "./log/pm2_err.log",
+      "out_file": "./log/pm2_out.log",
+      "merge_logs": true,
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "pid_file": "./log/pm2_test.pid"
+    }
+  ]
+}
